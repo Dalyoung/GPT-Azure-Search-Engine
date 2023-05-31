@@ -17,7 +17,7 @@ from utils import (
     search_docs,
     get_answer,
 )
-st.set_page_config(page_title="GPT Smart Search", page_icon="📖", layout="wide")
+st.set_page_config(page_title="GPT Smart Search DY", page_icon="📖", layout="wide")
 # Add custom CSS styles to adjust padding
 st.markdown("""
         <style>
