@@ -29,7 +29,7 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-st.header("GPT Smart Search Engine by DY")
+st.header("GPT Smart Search Engine")
 
 AZURE_OPENAI_API_VERSION = "2023-03-15-preview"
 
@@ -62,7 +62,7 @@ coli1, coli2= st.columns([3,1])
 with coli1:
     query = st.text_input("Ask a question to your enterprise data lake", value= "What is CLP??", on_change=clear_submit)
 with coli2:
-    language= st.selectbox('Answer language',('English', 'Korean', 'Spanish', 'French', 'German', 'Portuguese', 'Italian'), index=0)
+    language= st.selectbox('Answer language',('Korean', 'English', 'Spanish', 'French', 'German', 'Portuguese', 'Italian'), index=0)
 
 # options = ['English', 'Spanish', 'Portuguese', 'French', 'Russian']
 # selected_language = st.selectbox('Answer Language:', options, index=0)
