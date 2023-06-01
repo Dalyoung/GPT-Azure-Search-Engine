@@ -7,6 +7,7 @@ import random
 from collections import OrderedDict
 from openai.error import OpenAIError
 from langchain.docstore.document import Document
+import traceback
 
 from utils import (
     get_search_results,
@@ -97,8 +98,9 @@ else:
             try:
                 index1_name = "cogsrch-index-files"
                 index2_name = "cogsrch-index-csv"
-                index3_name = "hotels-sample-index"
-                indexes = [index1_name, index2_name, index3_name]
+                #index3_name = "hotels-sample-index"
+                #indexes = [index1_name, index2_name, index3_name]
+                indexes = [index1_name, index2_name]
                 
                 agg_search_results = get_search_results(query, indexes)
                 ordered_results = order_search_results(agg_search_results, reranker_threshold=1)
@@ -110,7 +112,8 @@ else:
 
             except Exception as e:
                 st.markdown("Not data returned from Azure Search, check connection..")
-                st.markdown(e)
+                #st.markdown(e)
+                st.markdown(traceback.format_exc())
             
             if "ordered_results" in locals():
                 try:
