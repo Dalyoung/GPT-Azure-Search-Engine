@@ -59,7 +59,7 @@ For example:
 
 coli1, coli2= st.columns([3,1])
 with coli1:
-    query = st.text_input("Ask a question to your enterprise data lake", value= "What is CLP?", on_change=clear_submit)
+    query = st.text_input("Ask a question to your enterprise data lake", value= "What is CLP??", on_change=clear_submit)
 with coli2:
     language= st.selectbox('Answer language',('English', 'Korean', 'Spanish', 'French', 'German', 'Portuguese', 'Italian'), index=0)
 
@@ -97,7 +97,8 @@ else:
             try:
                 index1_name = "cogsrch-index-files"
                 index2_name = "cogsrch-index-csv"
-                indexes = [index1_name, index2_name]
+                index3_name = "hotels-sample-index"
+                indexes = [index1_name, index2_name, index3_name]
                 
                 agg_search_results = get_search_results(query, indexes)
                 ordered_results = order_search_results(agg_search_results, reranker_threshold=1)
