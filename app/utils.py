@@ -307,7 +307,7 @@ class DocSearchWrapper(BaseTool):
     indexes: List[str]
     k: int = 10
     deployment_name: str = "gpt-35-turbo"
-    response_language: str = "English"
+    response_language: str = "Korean"
     reranker_th: int = 1
     max_tokens: int = 500
     temperature: float = 0.5

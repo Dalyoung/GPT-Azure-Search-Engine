@@ -100,7 +100,12 @@ else:
                 index2_name = "cogsrch-index-csv"
                 #index3_name = "hotels-sample-index"
                 #indexes = [index1_name, index2_name, index3_name]
-                indexes = [index1_name, index2_name]
+                indexes = ["cogsrch-index-files"
+                            ,"cogsrch-index-csv"
+                          ,"hcc-card-guide-index"
+                          ,"hcc-card-manual-index"
+                          ,"hotels-sample-index"
+                        ]
                 
                 agg_search_results = get_search_results(query, indexes)
                 ordered_results = order_search_results(agg_search_results, reranker_threshold=1)
